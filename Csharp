@@ -1,0 +1,260 @@
+namespace project_01
+{
+    public partial class Form1 : Form
+    {
+        string operate="";
+        decimal calculation = 0, ans=0;
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            if(textBox3.Text == "+" || textBox3.Text== "-" || textBox3.Text == "*" || textBox3.Text == "/")
+            {
+                textBox3.Text = "1";
+            }
+            else
+            {
+                string data = textBox3.Text;
+                textBox3.Text = data + "1";
+            }
+            
+
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            if (textBox3.Text == "+" || textBox3.Text == "-" || textBox3.Text == "*" || textBox3.Text == "/")
+            {
+                textBox3.Text = "2";
+            }
+            else
+            {
+                string data = textBox3.Text;
+                textBox3.Text = data + "2";
+            }
+         
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            if (textBox3.Text == "+" || textBox3.Text == "-" || textBox3.Text == "*" || textBox3.Text == "/")
+            {
+                textBox3.Text = "3";
+            }
+            else
+            {
+                string data = textBox3.Text;
+                textBox3.Text = data + "3";
+            }
+           
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            if (textBox3.Text == "+" || textBox3.Text == "-" || textBox3.Text == "*" || textBox3.Text == "/")
+            {
+                textBox3.Text = "4";
+            }
+            else
+            {
+                string data = textBox3.Text;
+                textBox3.Text = data + "4";
+            }
+            
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            if (textBox3.Text == "+" || textBox3.Text == "-" || textBox3.Text == "*" || textBox3.Text == "/")
+            {
+                textBox3.Text = "5";
+            }
+            else
+            {
+                string data = textBox3.Text;
+                textBox3.Text = data + "5";
+            }
+           
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            if (textBox3.Text == "+" || textBox3.Text == "-" || textBox3.Text == "*" || textBox3.Text == "/")
+            {
+                textBox3.Text = "6";
+            }
+            else
+            {
+                string data = textBox3.Text;
+                textBox3.Text = data + "6";
+            }
+            
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            if (textBox3.Text == "+" || textBox3.Text == "-" || textBox3.Text == "*" || textBox3.Text == "/")
+            {
+                textBox3.Text = "7";
+            }
+            else
+            {
+                string data = textBox3.Text;
+                textBox3.Text = data + "7";
+            }
+            
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            if (textBox3.Text == "+" || textBox3.Text == "-" || textBox3.Text == "*" || textBox3.Text == "/")
+            {
+                textBox3.Text = "8";
+            }
+            else
+            {
+                string data = textBox3.Text;
+                textBox3.Text = data + "8";
+            }
+            
+        }
+
+        private void button13_Click(object sender, EventArgs e)
+        {
+            if (textBox3.Text == "+" || textBox3.Text == "-" || textBox3.Text == "*" || textBox3.Text == "/")
+            {
+                textBox3.Text = "9";
+            }
+            else
+            {
+                string data = textBox3.Text;
+                textBox3.Text = data + "9";
+            }
+            
+        }
+
+        private void button20_Click(object sender, EventArgs e)
+        {
+            if (textBox3.Text == "+" || textBox3.Text == "-" || textBox3.Text == "*" || textBox3.Text == "/")
+            {
+                textBox3.Text = "0";
+            }
+            else
+            {
+                string data = textBox3.Text;
+                textBox3.Text = data + "0";
+            }
+            
+        }
+
+        public void GetResultValue()
+        {
+            if (textBox3.Text != "*" && textBox3.Text != "+" && textBox3.Text != "-" && textBox3.Text != "/")
+            {
+                calculation = Convert.ToDecimal(textBox3.Text);
+
+            }
+
+
+        }
+            private void button18_Click(object sender, EventArgs e)
+        {
+            GetResultValue();
+            calculation = Convert.ToDecimal(textBox3.Text);
+            operate = "/";
+            textBox3.Text = "/";
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            textBox3.Clear();
+
+        }
+
+        private void button17_Click(object sender, EventArgs e)
+        {
+            GetResultValue();
+            calculation = Convert.ToDecimal(textBox3.Text);
+            operate = "-";
+            textBox3.Text = "-";
+        }
+
+        private void button16_Click(object sender, EventArgs e)
+        {
+            GetResultValue();
+            calculation = Convert.ToDecimal(textBox3.Text);
+            operate = "*";
+            textBox3.Text = "*";
+        }
+
+        private void button15_Click(object sender, EventArgs e)
+        {
+            GetResultValue();
+            calculation =Convert.ToDecimal(textBox3.Text);
+            operate = "+";
+            textBox3.Text = "+";
+        }
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+            this.Hide();
+            Form3 form3 = new Form3();
+            form3.ShowDialog();
+        }
+
+        private void button19_Click(object sender, EventArgs e)
+        {
+            decimal firstnum = calculation;
+            decimal secondnum = Convert.ToDecimal(textBox3.Text);
+            switch(operate)
+            {
+                case "+":
+                    calculation = (firstnum + secondnum);
+                    textBox3.Text=calculation.ToString();
+                    
+                    break;
+                case "-":
+                    calculation = (firstnum - secondnum);
+                    textBox3.Text = calculation.ToString();
+                    break;
+                case "*":
+                    calculation = (firstnum * secondnum);
+                    textBox3.Text = calculation.ToString();
+                    break;
+                case "/":
+                    calculation = (firstnum / secondnum);
+                    textBox3.Text = calculation.ToString();
+                    break;
+            }
+        }
+    }
+    
+}
