@@ -152,7 +152,9 @@ namespace project_01
             try
             {
                 obj.Open();
-                string query = "insert into stud values('parnam','dadhuldheral','987234')";
+                //string query = "insert into stud values('parnam','dadhuldheral','987234')";
+                //string query = "update stud set name= 'hari' where id =2";
+                string query = "DELETE FROM stud WHERE id=17";
                 SqlCommand cmd = new SqlCommand(query, obj);
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Saved Successfully");
@@ -282,6 +284,33 @@ namespace project_01
                     textBox3.Text = calculation.ToString();
                     break;
             }
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            
+        }
+
+        private void button14_Click(object sender, EventArgs e)
+        {
+            this.dataGridView1.Rows.Add("1", "anil", "samakhusi");
+            this.dataGridView1.Rows.Add("2", "mansan", "portugal");
+            this.dataGridView1.Rows.Add("3", "prabal", "mars");
+
+        }
+
+        private void button21_Click(object sender, EventArgs e)
+        {
+            int n = dataGridView1.Rows.Add();
+            dataGridView1.Rows[n].Cells[0].Value = id.Text;
+            dataGridView1.Rows[n].Cells[1].Value = name.Text;
+            dataGridView1.Rows[n].Cells[2].Value = address.Text;
+
+        }
+
+        private void textBox4_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
     
